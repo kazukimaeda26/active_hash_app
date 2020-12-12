@@ -12,6 +12,6 @@ class Genre < ActiveHash::Base
     { id: 10, name: 'その他' }
   ]
 
-  include Active::Hash::Associations
+  include ActiveHash::Associations
   has_many :articles
 end
