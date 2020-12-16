@@ -3,7 +3,18 @@
     記事を投稿する
     <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
     <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
+    <!-- 1.保存作のカラム名, メソッド名
+         2.配列のデータ, オブジェクトの配列
+         3.表示する際に参照するDBのカラム名, value属性の項目
+         4.実際に表示されるカラム名, テキストの項目
+         5.オプション
+         6.htmlオプション
+    -->
     <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
     <%= f.submit "投稿する" ,class:"btn" %>
   </div>
 <% end %>
+<select name="genre_id">
+  <option value="1">---</option>
+  <option value="2">経済</option>
+</select>
